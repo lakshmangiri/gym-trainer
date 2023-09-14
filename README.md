@@ -73,7 +73,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-Credits: 
+### Credits
 
 Thanks to Javascript Mastry youtube channel [https://www.youtube.com/c/JavaScriptMastery], [https://www.jsmastery.pro/] for providing this wonderful tutorial in mastering ReactJs with Material UI. This project was built with the help of the tutorial video [https://www.youtube.com/watch?v=KBpoBc98BwM].
 
