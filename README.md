@@ -1,3 +1,7 @@
+Application Name: GYM TRAINER
+
+Description: A web application showcases the list of work outs targeting specific body parts. This can be used by new gym joiners to work out on their own by refering to this web application. This connects with Rapid Api to provide the work out information.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +72,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+Credits: 
+
+Thanks to Javascript Mastry youtube channel [https://www.youtube.com/c/JavaScriptMastery], [https://www.jsmastery.pro/] for providing this wonderful tutorial in mastering ReactJs with Material UI. This project was built with the help of the tutorial video [https://www.youtube.com/watch?v=KBpoBc98BwM].
+
+The UI was modified and enhanced with my learnings from the tutorial. The idea behind the project, full credits to JavaScript Mastery. A big Thanks!!
+
