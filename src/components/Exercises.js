@@ -10,15 +10,6 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
     const [currentPage, setCurrentPage] = useState(1);
     const exercisesPerPage = 9;
 
-    const indexOfLastExercise = currentPage * exercisesPerPage;
-    const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
-    const currentExercises = exercises.slice(indexOfFirstExercise, indexOfLastExercise);
-
-    const paginate = (e, value) => {
-        setCurrentPage(value);
-        window.scrollTo({ top: 1800, behavior: 'smooth'})
-    }
-
     useEffect(() => {
         const fetchExercisesData = async () => {
             let exercisesData = [];
@@ -34,15 +25,34 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
 
         fetchExercisesData(); 
     }, [bodyPart]);
+    
+    console.log("Current Page: ", currentPage);
+    const indexOfLastExercise = currentPage * exercisesPerPage;
+    const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
+    console.log(indexOfFirstExercise);
+    console.log(indexOfLastExercise);
+    const currentExercises = exercises.slice(indexOfFirstExercise, indexOfLastExercise);
+
+    const paginate = (e, value) => {
+        setCurrentPage(value);
+        window.scrollTo({ top: 1800, behavior: 'smooth'})
+    }
+
+
 
   return (
     <Box 
         id="exercises" 
-        sx= {{ mt: { lg: '110px' }}}
-        mt="50px"
+        sx= {{ mt: { lg: '280px' }}}
         p="20px"
     >
-        <Typography variant='h3' mb="46px">
+        <Typography 
+            variant='h4' 
+            fontWeight={600} 
+            color="#EFB700" 
+            fontFamily="Montserrat" 
+            mb="40px"
+            sx={{ marginLeft: {xs: '40px', lg: '20px'}, fontSize: { xs: '14px', lg: '26px' } }}>
             Showing results
         </Typography>
         <Stack 
@@ -57,9 +67,19 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
         </Stack>
         <Stack  mt="100px" alignItems="center">
             {exercises.length > 9 && (
-                <Pagination 
-                    color="standard"
-                    shape="rounded"
+                <Pagination
+                    color="primary"
+                    sx={{
+                        '& .MuiPaginationItem-page': {
+                          color: 'white', // Change the color of page numbers to white
+                        },
+                        '& .MuiPaginationItem-ellipsis': {
+                            color: 'white', // Change the color of ellipsis (...) to white
+                          },
+                          '& .MuiPaginationItem-root': {
+                            color: 'white', // Change the color of all elements to white
+                          },
+                    }}
                     defaultPage={1}
                     count={Math.ceil(exercises.length / exercisesPerPage)}
                     page={currentPage}

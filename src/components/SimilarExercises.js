@@ -5,21 +5,30 @@ import { Box, Stack, Typography } from '@mui/material';
 
 const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }) => {
   return (
-    <Box sx={{ mt: {lg: '100px', xs: '0'} }}>
-      <Typography variant="h3" mb={5}>
+    <Box sx={{ mt: {lg: '0px', xs: '0px'} }}>
+      <Typography 
+        variant="h5" 
+        fontFamily="Montserrat" 
+        color="#EFB700" 
+        pl="40px"
+        sx={{ fontSize: {xs: '16px', lg: '24px' } }}>
         Exercises that target the same muscle group
       </Typography>
-      <Stack direction="row" sx={{ p: '2px', position: 'relative' }}>
+      <Stack direction="row" sx={{ p: {lg:'50px 20px', xs: '25px 10px'}, position: 'relative' }}>
         {targetMuscleExercises.length ? 
           <HorizontalScrollBar data={targetMuscleExercises} />
         : 
           <Loader />
         }
       </Stack>
-      <Typography variant="h3" mb={5}>
+      <Typography variant="h5" 
+        fontFamily="Montserrat" 
+        color="#EFB700" 
+        pl="40px"
+        sx={{ fontSize: {xs: '16px', lg: '24px' } }}>
         Exercises that uses the same equipment
       </Typography>
-      <Stack direction="row" sx={{ p: '2px', position: 'relative' }}>
+      <Stack direction="row" sx={{ p: {lg:'50px 20px', xs: '25px 10px'}, position: 'relative' }}>
         {equipmentExercises.length ? 
           <HorizontalScrollBar data={equipmentExercises} />
         : 

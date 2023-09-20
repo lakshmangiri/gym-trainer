@@ -41,7 +41,7 @@ const ExerciseDetails = () => {
   }, [id]);
 
   return (
-    <Box>
+    <Box mb={5}>
       <Details exerciseDetail={exerciseDetail}/>
       <ExerciseVideos exerciseVideos={exerciseVideos} name={exerciseDetail.name} />
       <SimilarExercises targetMuscleExercises={targetMuscleExercises} equipmentExercises={equipmentMuscleExercises} />

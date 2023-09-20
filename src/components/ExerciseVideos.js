@@ -8,14 +8,20 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
     console.log(exerciseVideos);
 
   return (
-    <Box sx={{ marginTop: {lg: '200px', xs: '20px'}}} p="20px">
-        <Typography variant="h4" mb="33px">
-            Watch <span style={{ color: '#FF2625', textTransform: 'capitalize'}}>{name}</span> exercise
+    <Box sx={{ marginTop: {lg: '30px', xs: '20px'}, padding: {xs: '10px', lg: '40px'}}}>
+        <Typography 
+            variant="h4" 
+            mb="30px" 
+            fontFamily="Montserrat" 
+            color="#EFB700"
+            sx={{fontSize: {lg: '24px', xs: '16px'}}}>
+            Watch {name} exercise
             <Stack 
                 justifyContent="flex-start" 
                 flexWrap="wrap" 
                 alignItems="center" 
                 sx={{
+                    mt: '40px',
                     flexDirection: {lg: 'row'},
                     gap: { lg: '110px', xs: '0'}
                 }}>
@@ -28,10 +34,10 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
                             rel="noreferrer">
                                 <img src={item.video.thumbnails[0].url} alt={item.video.title} />
                                 <Box>
-                                    <Typography variant="h5" color="#000">
+                                    <Typography fontFamily="Montserrat" sx={{ textDecorationLine: 'underline'}} color="#FFF">
                                         {item.video.title}
                                     </Typography>
-                                    <Typography variant="h5" color="#000">
+                                    <Typography variant="h6" color="#FFF" fontWeight={700}>
                                         {item.video.channelName}
                                     </Typography>
                                 </Box>

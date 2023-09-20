@@ -1,17 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { Button, Stack, Typography } from "@mui/material"
+import { Button, Stack, Typography, Box } from "@mui/material"
 
 const ExerciseCard = ({ exercise }) => {
   return (
     <Link className="exercise-card" to={`/exercise/${exercise.id}`}>
-        <img src={exercise.gifUrl} alt={exercise.name} loading='lazy' />
+        <img src={exercise.gifUrl} alt={exercise.name} loading='lazy' p="15px" />
+        <Box style={{ backgroundColor: "#EFB700", borderRadius: '20px' }}>
         <Stack 
-        direction="row">
+        direction="row" >
             <Button sx={{
+                mt: '15px',
                 ml: '21px', 
                 color: '#FFF' , 
-                background:'#FFA9A9', 
+                background:'#001D3D', 
                 fontSize:'14px', 
                 borderRadius: '20px', 
                 textTransform: 'capitalize'
@@ -20,9 +22,10 @@ const ExerciseCard = ({ exercise }) => {
                 {exercise.bodyPart}
             </Button>
             <Button sx={{
+                mt: '15px',
                 ml: '21px', 
                 color: '#FFF' , 
-                background:'#FCC757', 
+                background:'#409DF4', 
                 fontSize:'14px', 
                 borderRadius: '20px', 
                 textTransform: 'capitalize'
@@ -34,12 +37,13 @@ const ExerciseCard = ({ exercise }) => {
         <Typography ml="21px" 
             color="#000" 
             fontWeight="bold" 
-            mt="11px" 
+            pt="11px" 
             pb="10px" 
             textTransform="capitalize"
-            fontSize="18px">
+            sx={{fontSize: { xs: '14px', lg: '18px' } }}>
             {exercise.name}
         </Typography>
+        </Box>
     </Link>
   )
 }
